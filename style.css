@@ -1,0 +1,159 @@
+/* Main styles */
+:root {
+  --primary-color: rgb(24, 24, 24);
+  --primary-background-color: rgb(221, 221, 221);
+  --secondary-color: rgb(75, 75, 75);
+  --secondary-background-color: rgb(255, 255, 255);
+  --highlight-color: rgb(255, 85, 1);
+  --box-shadow-color: rgb(201, 201, 201);
+  --border-radius: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: var(--primary-color);
+  background-color: var(--primary-background-color);
+}
+
+/* Main Container */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-background-color);
+}
+
+/* Audio player */
+.audio-player {
+  width: 100%;
+  max-width: 100rem;
+  display: flex;
+  margin: 2rem 1rem;
+  background-color: var(--secondary-background-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0.2rem 0.2rem 1rem 0.2rem var(--box-shadow-color);
+}
+
+/* Play button */
+.play-button {
+  min-width: 13rem;
+  min-height: 13rem;
+
+  /* Reset default button styles */
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Main player body, which includes title, waveform, volume and timecode */
+.player-body {
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+/* Audio track title */
+.title {
+  width: 100%;
+  font-weight: 600;
+}
+
+/* Main waveform */
+.waveform {
+  width: 100%;
+  min-height: 8rem;
+  padding: 0.5rem 0;
+}
+
+/* Controls include volume mute/unmute, volume slider and timecode */
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Volume */
+.volume {
+  display: flex;
+  align-items: center;
+}
+.volume-icon {
+  cursor: pointer;
+}
+.volume-slider {
+  margin: 0 1rem;
+  cursor: pointer;
+
+  width: 100%;
+  outline: none;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+/* Custom volume slider */
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--highlight-color);
+
+  margin-top: -0.6rem;
+}
+.volume-slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--highlight-color);
+}
+.volume-slider::-ms-thumb {
+  -webkit-appearance: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--highlight-color);
+}
+.volume-slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 0.25rem;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+}
+.volume-slider::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+
+  width: 100%;
+  height: 0.25rem;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+}
+
+/* Timecode */
+.timecode {
+  color: var(--secondary-color);
+}

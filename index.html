@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoundCloud Player</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>SoundCloud Player</h1>
+
+      <div class="audio-player">
+        <button id="playButton" class="play-button">
+          <img
+            id="playButtonIcon"
+            class="play-button-icon"
+            src="assets/icons/play.svg"
+            alt="Play Button"
+          />
+        </button>
+
+        <div class="player-body">
+          <p class="title">Artist - Track Title</p>
+          <div id="waveform" class="waveform"></div>
+
+          <div class="controls">
+            <div class="volume">
+              <img
+                id="volumeIcon"
+                class="volume-icon"
+                src="assets/icons/volume.svg"
+                alt="Volume"
+              />
+              <input
+                id="volumeSlider"
+                class="volume-slider"
+                type="range"
+                name="volume-slider"
+                min="0"
+                max="100"
+                value="50"
+              />
+            </div>
+
+            <div class="timecode">
+              <span id="currentTime">00:00:00</span>
+              <span>/</span>
+              <span id="totalDuration">00:00:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/wavesurfer.js@4.6.0/dist/wavesurfer.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

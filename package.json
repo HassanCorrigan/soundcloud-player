@@ -1,0 +1,17 @@
+{
+  "name": "soundcloud-player",
+  "version": "1.0.0",
+  "description": "A SoundCloud-style audio player with waveform and audio controls.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "soundcloud",
+    "audio",
+    "player",
+    "waveform"
+  ],
+  "author": "Hassan Corrigan <github@hassancorrigan.com>",
+  "license": "MIT"
+}
