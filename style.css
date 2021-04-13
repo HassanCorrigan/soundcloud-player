@@ -6,6 +6,7 @@
   --secondary-background-color: rgb(255, 255, 255);
   --highlight-color: rgb(255, 85, 1);
   --box-shadow-color: rgb(201, 201, 201);
+  --disabled-button-color: rgb(175, 175, 175);
   --border-radius: 1rem;
 }
 
@@ -41,6 +42,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--primary-background-color);
+  padding: 1rem;
 }
 
 /* Audio player */
@@ -69,7 +71,7 @@ body {
 /* Main player body, which includes title, waveform, volume and timecode */
 .player-body {
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
 }
 
 /* Audio track title */
@@ -89,6 +91,11 @@ body {
 .controls {
   display: flex;
   justify-content: space-between;
+}
+
+/* Timecode */
+.timecode {
+  color: var(--secondary-color);
 }
 
 /* Volume */
@@ -153,7 +160,22 @@ body {
   border-radius: var(--border-radius);
 }
 
-/* Timecode */
-.timecode {
-  color: var(--secondary-color);
+/* Muted/disabled volume slider */
+.volume-slider[disabled] {
+  cursor: not-allowed;
+}
+.volume-slider[disabled]::-webkit-slider-thumb {
+  background-color: var(--disabled-button-color);
+}
+.volume-slider[disabled]::-moz-range-thumb {
+  background-color: var(--disabled-button-color);
+}
+.volume-slider[disabled]::-ms-thumb {
+  background-color: var(--disabled-button-color);
+}
+.volume-slider[disabled]::-webkit-slider-runnable-track {
+  background-color: var(--disabled-button-color);
+}
+.volume-slider[disabled]::-ms-track {
+  background-color: var(--disabled-button-color);
 }
